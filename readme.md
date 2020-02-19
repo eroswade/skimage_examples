@@ -5,9 +5,9 @@
 * swirl 漩涡
 * ssim 一个相似度评价
 * ransac 匹配算法
-* plot_register_rotation 坐标系变换: 极坐标,
+* plot_register_rotation 坐标系变换: <span style="color:red">极坐标</span>,
 * FFT
-* Radon变换
+* Radon变换 <span style="color:red">重点</span>
 * 金字塔
 * 仿射
 * 立体匹配 
@@ -20,10 +20,10 @@
 * random_walker 随机漫步
 * RAG
 * peak_local_max
-* threshold_niblack  threshold_sauvola
+* threshold_niblack  threshold_sauvola <span style="color:red">重点</span>
 * graph.cut_normalized
 * morphological_chan_vese
-* join_segmentations 把多个SEG 合并
+* join_segmentations 把多个SEG 合并 <span style="color:red">重点</span>
 * floodfill 水漫
 * chan_vese
 * Extrema 极值
@@ -53,7 +53,7 @@
 * Non-local means
 * Inpainting 图像修复
 * Hysteresis thresholding 滞后阈值法
-* Entropy 熵
+* Entropy 熵 <span style="color:red">重点</span>
 * 小波
 * Deconvolution 反卷积
 * Shift-invariant wavelet denoising
@@ -61,9 +61,9 @@
 ### feature detection 特征值
 * blob 
 * brief 需要harries做为角点检测, 才能做brief
-* CENSURE
+* CENSURE <span style="color:red">重点</span>
 * Corner 角点 harris
-* Dense DAISY feature  分块统计梯度方向直方图，不同的是，DAISY在分块策略上进行了改进，利用高斯卷积来进行梯度方向直方图的分块汇聚，这样利用高斯卷积的可快速计算性就可以快速稠密地进行特征描述子的提取
+* Dense DAISY feature <span style="color:red">重点</span> 分块统计梯度方向直方图，不同的是，DAISY在分块策略上进行了改进，利用高斯卷积来进行梯度方向直方图的分块汇聚，这样利用高斯卷积的可快速计算性就可以快速稠密地进行特征描述子的提取
 * Gabor filter 
 * grey level co-occurrence matrix  灰度共生矩阵  是一种典型的统计分析方法
 * Haar-like feature 
@@ -80,5 +80,5 @@
 * hough
 * Skeletonize 骨架化 用的还是形态学
 * shapes 建立各种规则图形
-* Scharr Edge Detection / Scharr - Prewitt / Scharr - Sobel
+* Scharr Edge Detection / Scharr - Prewitt / Scharr - Sobel <span style="color:red">重点</span>
 * Contour
