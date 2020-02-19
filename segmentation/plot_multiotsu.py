@@ -28,8 +28,10 @@ from skimage.filters import threshold_multiotsu
 # Setting the font size for all plots.
 matplotlib.rcParams['font.size'] = 9
 
-# The input image.
-image = data.camera()
+# # The input image.
+# image = data.camera()
+from skimage import io,color
+image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
 
 # Applying multi-Otsu threshold for the default value, generating
 # three classes.

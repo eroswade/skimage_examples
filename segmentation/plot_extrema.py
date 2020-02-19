@@ -16,17 +16,21 @@ from skimage import data
 from skimage import color
 from skimage.morphology import extrema
 from skimage import exposure
+from skimage import io
 
+# color_image = data.hubble_deep_field()
+#
+# # # for illustration purposes, we work on a crop of the image.
+# # x_0 = 70
+# # y_0 = 354
+# # width = 100
+# # height = 100
+# #
+# # img = color.rgb2gray(color_image)[y_0:(y_0 + height), x_0:(x_0 + width)]
+#
+# img = color.rgb2gray(color_image)
 
-color_image = data.hubble_deep_field()
-
-# for illustration purposes, we work on a crop of the image.
-x_0 = 70
-y_0 = 354
-width = 100
-height = 100
-
-img = color.rgb2gray(color_image)[y_0:(y_0 + height), x_0:(x_0 + width)]
+img = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
 
 # the rescaling is done only for visualization purpose.
 # the algorithms would work identically in an unscaled version of the

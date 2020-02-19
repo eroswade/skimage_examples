@@ -32,14 +32,16 @@ from skimage.segmentation import watershed
 from skimage.feature import peak_local_max
 
 
-# Generate an initial image with two overlapping circles
-x, y = np.indices((80, 80))
-x1, y1, x2, y2 = 28, 28, 44, 52
-r1, r2 = 16, 20
-mask_circle1 = (x - x1)**2 + (y - y1)**2 < r1**2
-mask_circle2 = (x - x2)**2 + (y - y2)**2 < r2**2
-image = np.logical_or(mask_circle1, mask_circle2)
+# # Generate an initial image with two overlapping circles
+# x, y = np.indices((80, 80))
+# x1, y1, x2, y2 = 28, 28, 44, 52
+# r1, r2 = 16, 20
+# mask_circle1 = (x - x1)**2 + (y - y1)**2 < r1**2
+# mask_circle2 = (x - x2)**2 + (y - y2)**2 < r2**2
+# image = np.logical_or(mask_circle1, mask_circle2)
 
+from skimage import io,color
+image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
 # Now we want to separate the two objects in image
 # Generate the markers as local maxima of the distance to the background
 distance = ndi.distance_transform_edt(image)

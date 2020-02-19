@@ -47,8 +47,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from skimage import data, img_as_float
 from skimage.segmentation import chan_vese
+from skimage import io,color
 
-image = img_as_float(data.camera())
+# image = img_as_float(data.camera())
+image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
 # Feel free to play around with the parameters to see how they impact the result
 cv = chan_vese(image, mu=0.25, lambda1=1, lambda2=1, tol=1e-3, max_iter=200,
                dt=0.5, init_level_set="checkerboard", extended_output=True)

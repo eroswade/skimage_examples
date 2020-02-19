@@ -59,7 +59,10 @@ def merge_mean_color(graph, src, dst):
                                       graph.nodes[dst]['pixel count'])
 
 
-img = data.coffee()
+# img = data.coffee()
+from skimage import io,color
+img = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
+
 labels = segmentation.slic(img, compactness=30, n_segments=400)
 g = graph.rag_mean_color(img, labels)
 

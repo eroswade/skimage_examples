@@ -18,8 +18,10 @@ from skimage.measure import label
 from skimage.segmentation import slic, join_segmentations, watershed
 from skimage.color import label2rgb
 from skimage import data
+from skimage import io,color
 
-coins = data.coins()
+coins = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
+# coins = data.coins()
 
 # Make segmentation using edge-detection and watershed.
 edges = sobel(coins)

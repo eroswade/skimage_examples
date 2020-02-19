@@ -28,7 +28,9 @@ from skimage.filters import threshold_otsu
 # .. [2] https://en.wikipedia.org/wiki/Otsu's_method
 #
 
-image = data.camera()
+# image = data.camera()
+from skimage import io,color
+image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
 thresh = threshold_otsu(image)
 binary = image > thresh
 
@@ -64,8 +66,8 @@ plt.show()
 
 from skimage.filters import try_all_threshold
 
-img = data.page()
-
+# img = data.page()
+img = image
 # Here, we specify a radius for local thresholding algorithms.
 # If it is not specified, only global algorithms are called.
 fig, ax = try_all_threshold(img, figsize=(10, 8), verbose=False)

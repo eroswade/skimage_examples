@@ -2,6 +2,7 @@
 =====================
 GLCM Texture Features
 =====================
+grey level co-occurrence matrix  灰度共生矩阵  是一种典型的统计分析方法
 
 This example illustrates texture classification using grey level
 co-occurrence matrices (GLCMs) [1]_. A GLCM is a histogram of co-occurring

@@ -22,8 +22,10 @@ from skimage.measure import label, regionprops
 from skimage.morphology import closing, square
 from skimage.color import label2rgb
 
+from skimage import io,color
 
-image = data.coins()[50:-50, 50:-50]
+image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
+# image = data.coins()[50:-50, 50:-50]
 
 # apply threshold
 thresh = threshold_otsu(image)

@@ -27,8 +27,10 @@ from skimage import data
 from skimage.filters import rank
 from skimage.util import img_as_ubyte
 
+from skimage import io,color
+image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
 
-image = img_as_ubyte(data.camera())
+# image = img_as_ubyte(data.camera())
 
 # denoise image
 denoised = rank.median(image, disk(2))

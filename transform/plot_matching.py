@@ -33,9 +33,12 @@ from skimage.exposure import rescale_intensity
 from skimage.color import rgb2gray
 from skimage.measure import ransac
 
+# image = data.checkerboard()
+from skimage import io,color
+image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
 
 # generate synthetic checkerboard image and add gradient for the later matching
-checkerboard = img_as_float(data.checkerboard())
+checkerboard = img_as_float(image)
 img_orig = np.zeros(list(checkerboard.shape) + [3])
 img_orig[..., 0] = checkerboard
 gradient_r, gradient_c = (np.mgrid[0:img_orig.shape[0],

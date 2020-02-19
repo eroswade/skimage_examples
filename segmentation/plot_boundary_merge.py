@@ -14,7 +14,7 @@ For an example of how to construct region boundary based RAGs, see
 
 """
 
-from skimage import data, segmentation, filters, color
+from skimage import data, segmentation, filters, color,io
 from skimage.future import graph
 from matplotlib import pyplot as plt
 
@@ -66,10 +66,11 @@ def merge_boundary(graph, src, dst):
     """
     pass
 
-img = data.coffee()
-edges = filters.sobel(color.rgb2gray(img))
-labels = segmentation.slic(img, compactness=30, n_segments=400)
-g = graph.rag_boundary(labels, edges)
+# img = data.coffee()
+img = io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg')
+edges = filters.sobel(color.rgb2gray(img)) # sobel检测
+labels = segmentation.slic(img, compactness=30, n_segments=400) # k-means 分割
+g = graph.rag_boundary(labels, edges) # 用RAG分割
 
 graph.show_rag(labels, g, img)
 plt.title('Initial RAG')

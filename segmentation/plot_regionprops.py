@@ -27,6 +27,9 @@ image = rotate(image, angle=15, order=0)
 rr, cc = ellipse(100, 100, 60, 50)
 image[rr, cc] = 1
 
+# from skimage import io,color
+# image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
+
 label_img = label(image)
 regions = regionprops(label_img)
 

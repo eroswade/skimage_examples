@@ -31,13 +31,14 @@ from skimage.filters import (threshold_otsu, threshold_niblack,
 
 matplotlib.rcParams['font.size'] = 9
 
-
-image = page()
+from skimage import io,color
+image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
+# image = page()
 binary_global = image > threshold_otsu(image)
 
 window_size = 25
 thresh_niblack = threshold_niblack(image, window_size=window_size, k=0.8)
-thresh_sauvola = threshold_sauvola(image, window_size=window_size)
+thresh_sauvola = threshold_sauvola(image, window_size=window_size)# 感觉这个用来做光滤很好用
 
 binary_niblack = image > thresh_niblack
 binary_sauvola = image > thresh_sauvola

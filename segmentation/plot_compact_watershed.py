@@ -20,8 +20,10 @@ import numpy as np
 from skimage import data, util, filters, color
 from skimage.segmentation import watershed
 import matplotlib.pyplot as plt
+from skimage import io
 
-coins = data.coins()
+coins = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
+# coins = data.coins()
 edges = filters.sobel(coins)
 
 grid = util.regular_grid(coins.shape, n_points=468)

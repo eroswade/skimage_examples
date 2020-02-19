@@ -66,7 +66,10 @@ from skimage.io import imread
 from skimage.data import shepp_logan_phantom
 from skimage.transform import radon, rescale
 
-image = shepp_logan_phantom()
+from skimage import io,color
+image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/Deliveryimage/1.jpg'))
+image = image[:300,:300]
+# image = shepp_logan_phantom()
 image = rescale(image, scale=0.4, mode='reflect', multichannel=False)
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 4.5))
