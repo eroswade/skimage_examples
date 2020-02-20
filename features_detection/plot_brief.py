@@ -18,8 +18,12 @@ from skimage.feature import (match_descriptors, corner_peaks, corner_harris,
 from skimage.color import rgb2gray
 import matplotlib.pyplot as plt
 
+# im = data.astronaut()
+# img1 = rgb2gray(im)
 
-img1 = rgb2gray(data.astronaut())
+from skimage import io,color
+img1 = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf.jpg'))
+
 tform = tf.AffineTransform(scale=(1.2, 1.2), translation=(0, -100))
 img2 = tf.warp(img1, tform)
 img3 = tf.rotate(img1, 25)

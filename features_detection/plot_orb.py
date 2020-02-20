@@ -20,7 +20,10 @@ from skimage.color import rgb2gray
 import matplotlib.pyplot as plt
 
 
-img1 = rgb2gray(data.astronaut())
+# img1 = rgb2gray(data.astronaut())
+from skimage import io,color
+img1 = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf.jpg'))
+
 img2 = tf.rotate(img1, 180)
 tform = tf.AffineTransform(scale=(1.3, 1.1), rotation=0.5,
                            translation=(0, -200))

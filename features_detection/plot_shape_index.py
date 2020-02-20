@@ -87,6 +87,8 @@ def create_test_image(
 
 # First create the test image and its shape index
 
+# from skimage import io,color
+# image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf.jpg'))
 image = create_test_image()
 
 s = shape_index(image)

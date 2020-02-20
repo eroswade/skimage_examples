@@ -16,7 +16,11 @@ from skimage.color import rgb2gray
 import matplotlib.pyplot as plt
 
 
-img_orig = rgb2gray(data.astronaut())
+# img_orig = rgb2gray(data.astronaut())
+
+from skimage import io,color
+img_orig = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf.jpg'))
+
 tform = tf.AffineTransform(scale=(1.5, 1.5), rotation=0.5,
                            translation=(150, -200))
 img_warp = tf.warp(img_orig, tform)
