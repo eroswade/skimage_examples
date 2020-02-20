@@ -85,7 +85,7 @@ from skimage.feature import hog
 from skimage import data, exposure
 
 from skimage import io,color
-image = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf.jpg'))
+image = io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/branch.jpg')
 # image = data.astronaut()
 
 fd, hog_image = hog(image, orientations=8, pixels_per_cell=(16, 16),

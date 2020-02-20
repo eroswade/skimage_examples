@@ -19,11 +19,12 @@ import matplotlib.pyplot as plt
 # img_orig = rgb2gray(data.astronaut())
 
 from skimage import io,color
-img_orig = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf.jpg'))
+img_orig = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf1.jpg'))
+img_warp = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf2.jpg'))
 
-tform = tf.AffineTransform(scale=(1.5, 1.5), rotation=0.5,
-                           translation=(150, -200))
-img_warp = tf.warp(img_orig, tform)
+# tform = tf.AffineTransform(scale=(1.5, 1.5), rotation=0.5,
+#                            translation=(150, -200))
+# img_warp = tf.warp(img_orig, tform)
 
 detector = CENSURE()
 

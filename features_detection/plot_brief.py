@@ -21,11 +21,13 @@ import matplotlib.pyplot as plt
 # im = data.astronaut()
 # img1 = rgb2gray(im)
 
+# brief 用来做SFM不行
 from skimage import io,color
-img1 = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf.jpg'))
+img1 = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf1.jpg'))
+img2 = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf2.jpg'))
 
-tform = tf.AffineTransform(scale=(1.2, 1.2), translation=(0, -100))
-img2 = tf.warp(img1, tform)
+# tform = tf.AffineTransform(scale=(1.2, 1.2), translation=(0, -100))
+# img2 = tf.warp(img1, tform)
 img3 = tf.rotate(img1, 25)
 
 keypoints1 = corner_peaks(corner_harris(img1), min_distance=5)

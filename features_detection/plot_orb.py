@@ -19,10 +19,11 @@ from skimage.feature import (match_descriptors, corner_harris,
 from skimage.color import rgb2gray
 import matplotlib.pyplot as plt
 
-
+# orb在做SFM的时候不行
 # img1 = rgb2gray(data.astronaut())
 from skimage import io,color
-img1 = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf.jpg'))
+img1 = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf1.jpg'))
+# img2 = color.rgb2gray(io.imread('E:/OwnWork/Leaf/TestImage/leafs/leafpgm/leaf2.jpg'))
 
 img2 = tf.rotate(img1, 180)
 tform = tf.AffineTransform(scale=(1.3, 1.1), rotation=0.5,
